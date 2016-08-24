@@ -1,1 +1,1 @@
-# com.auCordova.LogBook
+Aurelia sample with Apache Cordova

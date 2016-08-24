@@ -1,0 +1,26 @@
+<template>
+    <div class="page page-on-center">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <!--Left-->
+                <div class="left">
+                </div>
+                <!--Center-->
+                <div class="right">
+                    ورود اطلاعات
+                </div>
+                <!--Right-->
+                <div class="center">
+                    <a href="javascript:;" click.trigger="navigateToList()" class="back link icon-only"><i class="icon icon-back"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <!--<a href="#" class="floating-button color-pink"><i class="icon icon-plus"></i></a>-->
+
+
+        <div class="page-content" style="padding-bottom: 0;">
+            <iframe id="MainIframe" src.bind="baseUrl" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+</template>

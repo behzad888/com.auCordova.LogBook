@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'sans';
+    src: url('font/IRAN-Sans.woff') 
+    format('woff'), url('font/IRAN-Sans.ttf') format('truetype');
+}
+
+body {
+    font-family: sans !important;
+    font-size: 12px !important;
+}
+.button.button-fill.color-main {
+    background: #225769 !important;
+}
+.login-screen-title {
+    font-size: 30px !important;
+}
+.list-block .input-item .label, .list-block.inputs-list .label, .list-block .input-item .floating-label, .list-block.inputs-list .floating-label {
+    font-size: 16px !important;
+}
+::-webkit-scrollbar {
+    height: 1px;
+    width: 2px;
+    background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-corner {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: #677073;
+}
+.card-footer{
+        background: #f5f5f5 !important;
+}
+
+.page-content.login-screen-content{
+    top : 0;
+}
+.page-content{
+    top: 10px;
+    padding-bottom: 85px;
+}
+.chip, .floating-button.color-pink{
+    background: #02a0ab !important;
+    color: white !important;
+}
+.list-block .accordion-item .content-block, .list-block .accordion-item .list-block {   
+    margin-right: 3em;
+}
+.popover {
+    width: 220px !important;
+    }
+
+.bg-approved{
+    background-color: #cfe593;
+}
+
+.bg-disapproved{
+    background-color: #caa2c7;
+}

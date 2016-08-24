@@ -1,0 +1,37 @@
+<html>
+<head>
+    <style>
+    .splash{
+     display: block; 
+     position: fixed; 
+     top: 0px; 
+     left: 0px; 
+     height: 100%; 
+     width: 100%; 
+     z-index: 1002; 
+     background-color: #191F26; 
+     background-color: white; 
+     opacity: 1; 
+     background-image: url('img/Loading.gif'); 
+     background-repeat: no-repeat; 
+     background-position: center; 
+     background-size: auto; 
+ }
+    </style>
+    <title>مدیریت</title>
+    <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.6.3/css/font-awesome.css">
+    <!--<link rel="stylesheet" href="styles/bootstrap-rtl.css">-->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body aurelia-app class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md page-sidebar-fixed">
+    <div class="splash">
+    
+    </div>
+        <script type="text/javascript" src="jspm_packages/system.js"></script>
+        <script type="text/javascript" src="config.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        System.import('aurelia-bootstrapper');  
+    </script>
+</body>
+</html>

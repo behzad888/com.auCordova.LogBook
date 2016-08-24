@@ -1,0 +1,39 @@
+<template>
+    <div class="login-screen modal-in" style="display: block;">
+        <div class="view">
+            <div class="page">
+                <div class="page-content login-screen-content">
+                                    <!--<a href="http://www.yeganehsoft.ir" target="_blank" title="محصولی از شرکت یگانه"><img class="Login_Logo" src="../img/YeganehLogo.png" alt=""></a>-->
+
+                    <div class="login-screen-title">سامانه لاگ بوک الکترونیک و متمرکز</div>
+                    <form method="POST" role="form" submit.delegate="login()" validate.bind="validation">
+                        <div class="list-block inputs-list">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">نام کاربری</div>
+                                        <div class="item-input item-input-field">
+                                            <input value.bind="domain.username" type="text" name="username" placeholder="نام کاربری" class="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">رمز عبور</div>
+                                        <div class="item-input item-input-field">
+                                            <input value.bind="domain.pass" type="password" name="password" placeholder="رمز عبور">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-block"><input  value="ورود به سامانه" type="submit" href="#" class="button button-big button-fill button-raised color-main" /></div>
+                        <div class="content-block">
+                            <div class="list-block-label">${error}</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

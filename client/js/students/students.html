@@ -1,0 +1,102 @@
+<template>
+    <div class="page page-on-center">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <!--Left-->
+                <div class="left">
+                    <!--<a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a>-->
+                </div>
+                <!--Center-->
+                <div class="right">
+                    فعالیتها
+                </div>
+                <!--Right-->
+                <div class="center">
+                    <!--<a href="#" class="link open-panel icon-only"><i class="icon icon-bars"></i></a>-->
+                </div>
+
+            </div>
+        </div>
+        <!--<a href="#" class="floating-button color-pink"><i class="icon icon-plus"></i></a>-->
+
+
+        <div class="page-content pull-to-refresh-content">
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                </div>
+                <div class="col-33">
+                    <a href="#" data-popover=".popover-menu" class="button button-fill button-raised color-green open-popover">فرم جدید</a>
+                </div>
+                <div class="col-33">
+                </div>
+            </div>
+            <div class="card" repeat.for="item of collection">
+                <div class="card-header ${item.ApprovalStatus === 2? 'bg-approved' : ''} ${item.ApprovalStatus === 3? 'bg-disapproved' : ''} ${item.ApprovalStatus === 1? 'bg-gray' : ''}">
+                    <!--right-->
+                    <span>${item.Type.Name}</span>
+                    <!--left-->
+                    <span>
+                         <div class="" click.delegate="action(item.Id,item.ApprovalStatus)">
+                            <div class="button button-fill button-raised">
+                                امکانات
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <p style="padding-right: 3em;">
+                        <span>ثبت توسط</span> : <span>${item.DetailAccount.Contacts.FullName}</span>
+                    </p>
+                    <div class="list-block accordion-list">
+                        <ul>
+                            <li class="accordion-item">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">جزئیات فرم دستیار </div>
+                                    </div>
+                                </a>
+                                <div class="accordion-item-content">
+                                    <div class="content-block">
+                                        <ul>
+                                            <li repeat.for="itm1 of item.InputFields" if.bind="itm1.HasStudentPermission">${itm1.ResponseTitle} : ${itm1.Value}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">جزئیات فرم استاد</div>
+                                    </div>
+                                </a>
+                                <div class="accordion-item-content">
+                                    <div class="content-block">
+                                        <ul>
+                                            <li repeat.for="itm1 of item.InputFields" if.bind="!itm1.HasStudentPermission">${itm1.ResponseTitle} : ${itm1.Value}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay"></div>
+        <div class="popover popover-menu">
+            <div class="popover-inner">
+                <div class="list-block">
+                    <ul>
+                        <li repeat.for="item of formTypeCollection">
+                            <a href="javascript:;" id="${item.Id}" click.trigger="activityCreate(item.Id)" class="list-button item-link">${item.Name}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
